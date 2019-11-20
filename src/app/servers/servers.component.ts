@@ -15,6 +15,7 @@ export class ServersComponent implements OnInit {
     allowNewServer = false;
     //Creating proprety for event binidng
     serverCreationStatus = 'No server was created';
+    serverName = '';
 
   constructor() { 
     //Creating setTimeout method with es6 funciton declaration
@@ -29,5 +30,9 @@ export class ServersComponent implements OnInit {
   //Creating method which will be triger out when someone click on button with this method calling
   onCreateServer(){
      this.serverCreationStatus = 'Server was created';
+  }
+  //Creating method for change the propraty with input values
+  onUpdateServerName(event: Event){
+        this.serverName = event.target.value;
   }
 }
