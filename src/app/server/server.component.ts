@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
 
 //Here I created the class with name ServerComponent and before the class i put keyword export. This export keyword means thah angular can catch this class from another file
 export class ServerComponent{
-
+  //Creating class propreties which we'll display on front end. I also here creeate typescirpt type propratie
+    serverId: number = 10;
+     serverStatus: string = 'offline';
+     //Creating method in the class that returns the value of proprati in the top of this class. This method we can call in the .html component file and dinamicly output the data
+     getServerStatus(){
+       return this.serverStatus;
+     }
 }
