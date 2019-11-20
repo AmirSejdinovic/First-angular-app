@@ -9,7 +9,7 @@ import { ServerComponent } from './server/server.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ServerComponent//Adding the ServerComponent in the NgModule class, with this angular knows that we have ServerComponent and it will render it
+    ServerComponent
   ],
   imports: [
     BrowserModule
