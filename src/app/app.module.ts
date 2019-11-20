@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 //Importing the created ServerComponent from the relative path
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
+import { Warning } from './warning/warning.component';
+import { SuccessComponent } from './success/success.component';
+
 
 
 @NgModule({
@@ -13,6 +16,9 @@ import { ServersComponent } from './servers/servers.component';
     AppComponent,
     ServerComponent,
     ServersComponent,
+    Warning,
+    SuccessComponent
+    
     
   ],
   imports: [
