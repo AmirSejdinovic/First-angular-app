@@ -13,6 +13,8 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   //cerating proprti for bindin propraty
     allowNewServer = false;
+    //Creating proprety for event binidng
+    serverCreationStatus = 'No server was created';
 
   constructor() { 
     //Creating setTimeout method with es6 funciton declaration
@@ -24,5 +26,8 @@ export class ServersComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  //Creating method which will be triger out when someone click on button with this method calling
+  onCreateServer(){
+     this.serverCreationStatus = 'Server was created';
+  }
 }
