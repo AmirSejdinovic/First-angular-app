@@ -11,8 +11,16 @@ export class ServerComponent{
   //Creating class propreties which we'll display on front end. I also here creeate typescirpt type propratie
     serverId: number = 10;
      serverStatus: string = 'offline';
+     constructor(){
+       this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
+     }
      //Creating method in the class that returns the value of proprati in the top of this class. This method we can call in the .html component file and dinamicly output the data
      getServerStatus(){
        return this.serverStatus;
+     }
+     //Creating method getColor in which is returning value of color for ngStyle directive
+     getColor(){
+       //Retunr the value for proprety servesstatus with terniari operateor if is online than is grean and if is offline than is the red
+       return this.serverStatus === 'online' ? 'green' : 'red';
      }
 }
