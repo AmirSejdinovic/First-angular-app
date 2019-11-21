@@ -1,3 +1,4 @@
 <!--Creating databinding with string interpelation. Here in duble brackets we pased the propreties and mehtods from export class in the .ts file for this component-->
 <!--Here i create the anglar directive ngStyle and pass it the propreti of background color which is switch depend of the return value from method getColor -->
-<p [ngStyle]="{backgroundColor: getColor()}">{{ 'Server '}} with ID {{ serverId }} is {{getServerStatus()}}</p>
+<p [ngStyle]="{backgroundColor: getColor()}"
+[ngClass]="{online: serverStatus === 'online'}" >{{ 'Server '}} with ID {{ serverId }} is {{getServerStatus()}}</p>
