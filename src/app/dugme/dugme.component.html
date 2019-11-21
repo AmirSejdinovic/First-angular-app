@@ -1,0 +1,16 @@
+<!--<button class="btn btn-danger" (click)="showSecret = !showSecret">Show the password</button>-->
+<button class="btn btn-danger" (click)="onToggleDisplay()">Show the password</button>
+<p *ngIf="showSecret">Secret password = tuna</p>
+<div 
+
+ *ngFor="let logItme of log"
+ [ngStyle]="{backgroundColor: logItme >= 5 ? 'blue' : 'transparent'}"
+ [ngClass]="{'white-text': logItme >= 5}"
+
+>
+  
+  {{ logItme}}
+
+</div>
+
+

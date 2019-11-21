@@ -9,6 +9,7 @@ import { ServersComponent } from './servers/servers.component';
 import { Warning } from './warning/warning.component';
 import { SuccessComponent } from './success/success.component';
 import { ExcersiceApp } from './input/input.component';
+import { Dugme } from './dugme/dugme.component';
 
 
 
@@ -19,7 +20,8 @@ import { ExcersiceApp } from './input/input.component';
     ServersComponent,
     Warning,
     SuccessComponent,
-    ExcersiceApp
+    ExcersiceApp,
+    Dugme
     
     
   ],
