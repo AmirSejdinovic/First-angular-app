@@ -8,6 +8,7 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { Warning } from './warning/warning.component';
 import { SuccessComponent } from './success/success.component';
+import { ExcersiceApp } from './input/input.component';
 
 
 
@@ -17,7 +18,8 @@ import { SuccessComponent } from './success/success.component';
     ServerComponent,
     ServersComponent,
     Warning,
-    SuccessComponent
+    SuccessComponent,
+    ExcersiceApp
     
     
   ],

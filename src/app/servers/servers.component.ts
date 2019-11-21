@@ -29,7 +29,7 @@ export class ServersComponent implements OnInit {
   }
   //Creating method which will be triger out when someone click on button with this method calling
   onCreateServer(){
-     this.serverCreationStatus = 'Server was created';
+     this.serverCreationStatus = 'Server was created: Name is' + this.serverName;
   }
   //Creating method for change the propraty with input values
  /* onUpdateServerName(event: Event){

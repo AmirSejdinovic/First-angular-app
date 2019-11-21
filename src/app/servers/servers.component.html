@@ -6,7 +6,7 @@
    class="form-control"
    [(ngModel)]="serverName"    
 >
-<p>{{ serverName }}</p>
+<!--<p>{{ serverName }}</p>-->
 <!--Creating button with property binding we bind the propraty diable with oru method-->
 <!--(click) is the angular whay of onClick event and after this we signed in the method which we call and which will happend when someone clikc-->
 <button calss="btn btn-danger" [disabled]="!allowNewServer" (click)="onCreateServer()">
