@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-cokpit',
@@ -12,7 +12,8 @@ export class CokpitComponent implements OnInit {
   @Output() serverCreated = new EventEmitter<{serverName: string, serverContent: string}>(); 
   @Output('bpCreated') bluePrintCreated = new EventEmitter<{serverName: string, serverContent: string}>();
   //newServerName = '';
-  newServerContent = '';
+  //newServerContent = '';
+  @ViewChild('serverContentInput') serverContentInput: ElementRef; 
 
   constructor() { }
 
@@ -22,11 +23,11 @@ export class CokpitComponent implements OnInit {
   onAddServer(nameInput: HTMLInputElement) {
     
     //Here we emit with EventEmitter emit() method the propretise
-  this.serverCreated.emit({serverName: nameInput.value, serverContent: this.newServerContent});
+  this.serverCreated.emit({serverName: nameInput.value, serverContent: this.serverContentInput.nativeElement.value});
   }
 //Creating the metodh onAddBLueprint
   onAddBlueprint(nameInput: HTMLInputElement) {
-    this.bluePrintCreated.emit({serverName: nameInput.value, serverContent: this.newServerContent});
+    this.bluePrintCreated.emit({serverName: nameInput.value, serverContent: this.serverContentInput.nativeElement.value});
   }
 
 }
