@@ -17,7 +17,7 @@ export class AppComponent {
     });
   }
 //Creating another method wtih argument blueprintData which expects the object element with keys
-  onBluepringAdded(blueprintData: {serverName: string, serverContent: string}) {
+  onBlueprintAdded(blueprintData: {serverName: string, serverContent: string}) {
     //Pushingh the bluprint data into serverElements array
     this.serverElements.push({
       type: 'blueprint',
