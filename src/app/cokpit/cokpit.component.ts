@@ -10,7 +10,7 @@ export class CokpitComponent implements OnInit {
   //new EventEmitter is the anguralr class which enables us to emit the data with the method emit()
   //Here we creted the new instance of EventEmitter 
   @Output() serverCreated = new EventEmitter<{serverName: string, serverContent: string}>(); 
-  @Output() bluePrintCreated = new EventEmitter<{serverName: string, serverContent: string}>();
+  @Output('bpCreated') bluePrintCreated = new EventEmitter<{serverName: string, serverContent: string}>();
   newServerName = '';
   newServerContent = '';
 
