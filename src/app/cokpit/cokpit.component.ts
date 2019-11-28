@@ -11,7 +11,7 @@ export class CokpitComponent implements OnInit {
   //Here we creted the new instance of EventEmitter 
   @Output() serverCreated = new EventEmitter<{serverName: string, serverContent: string}>(); 
   @Output('bpCreated') bluePrintCreated = new EventEmitter<{serverName: string, serverContent: string}>();
-  newServerName = '';
+  //newServerName = '';
   newServerContent = '';
 
   constructor() { }
@@ -19,13 +19,14 @@ export class CokpitComponent implements OnInit {
   ngOnInit() {
   }
 //Creating the method onAddServer. 
-  onAddServer() {
+  onAddServer(nameInput: HTMLInputElement) {
+    
     //Here we emit with EventEmitter emit() method the propretise
-  this.serverCreated.emit({serverName: this.newServerName, serverContent: this.newServerContent});
+  this.serverCreated.emit({serverName: nameInput.value, serverContent: this.newServerContent});
   }
 //Creating the metodh onAddBLueprint
-  onAddBlueprint() {
-    this.bluePrintCreated.emit({serverName: this.newServerName, serverContent: this.newServerContent});
+  onAddBlueprint(nameInput: HTMLInputElement) {
+    this.bluePrintCreated.emit({serverName: nameInput.value, serverContent: this.newServerContent});
   }
 
 }
