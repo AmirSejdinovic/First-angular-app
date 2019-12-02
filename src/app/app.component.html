@@ -1,26 +1,32 @@
 <div class="container">
-  <!--Calling the component and passing the propreties with method wich we declare in .ts file for this components name of the propreties we will created in the antohre parent compoent where we use the decorator @Output to output data that will be insert here-->
-  <app-cokpit 
-  
-  (serverCreated)="onServerAdded($event)"
-  (bpCreated)="onBlueprintAdded($event)"
-  ></app-cokpit>
-  <hr>
   <div class="row">
     <div class="col-xs-12">
-      <button class="btn btn-primary" (click)="onChangeFirst()">Change First Element</button>
-      <app-server-element 
-      *ngFor="let serverElement of serverElements"
-      [srvElement]="serverElement"
-      [name]="serverElement.name"
-      >
-      <p #contentParagraf>
-        <strong 
-        *ngIf="serverElement.type === 'server'" s
-        tyle="color: red">{{ serverElement.content }}</strong>
-        <em *ngIf="serverElement.type === 'blueprint'">{{ serverElement.content }}</em>
-      </p>
-    </app-server-element>
+      <button class="btn btn-primary"
+        (click)="onlyOdd = !onlyOdd"
+      >Only show odd numbers
+      </button>
+      <br><br>
+      <ul class="list-group">
+        <div *ngIf="onlyOdd">
+            <li 
+            class="list-group item"
+            *ngFor="let odd of oddNumbers"
+            >
+                 {{odd}}
+            </li>
+        </div>
+       
+        <div *ngIf="!onlyOdd">
+            <li 
+            class="list-group item"
+            *ngFor="let even of evenNumbers"
+            >
+                 {{even}}
+            </li>
+        </div>
+
+        
+      </ul>
     </div>
   </div>
 </div>
