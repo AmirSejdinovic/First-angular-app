@@ -11,7 +11,10 @@ import {
   AfterContentInit,
   AfterContentChecked,
   AfterViewInit,
-  AfterViewChecked
+  AfterViewChecked,
+  ViewChild,
+  ElementRef,
+  ContentChild
  } from '@angular/core';
 
 @Component({
@@ -25,6 +28,8 @@ export class ServerElementComponent implements OnInit, OnChanges, DoCheck,AfterC
   //@input is the Angular decorator which allow us to export the property to the public, and we than can call that propraty in another module
   @Input('srvElement') element: {type: string, name: string, content: string};
   @Input() name: string; 
+  @ViewChild('heading')  header;
+  @ContentChild('contentParagraf') paragraf;
 
   constructor() { 
     console.log('constructor called');
@@ -38,6 +43,7 @@ export class ServerElementComponent implements OnInit, OnChanges, DoCheck,AfterC
 
   ngOnInit() {
     console.log('NgIniti called');
+    console.log(this.header.nativeElement.textContnet);
   }
   ngDoCheck(){
     console.log("ngDoCheck called");
