@@ -6,12 +6,18 @@ import { BasicHeighDirective } from './basic-heighlight/basic-heiglight.directiv
 
 
 import { AppComponent } from './app.component';
+import {BeterHal} from './better-higlight/better-higlight.directive';
+
+
 
 //Importing the custom directice
 @NgModule({
   declarations: [
     AppComponent,
-    BasicHeighDirective
+    BasicHeighDirective,
+    BeterHal
+   
+   
     
   ],
   imports: [
